@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Features for CV/Resume Builder Application</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #6366f1;
+            padding-bottom: 20px;
+        }
+        
+        h1 {
+            color: #1e293b;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            color: #6366f1;
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        h3 {
+            color: #1e293b;
+            font-size: 1.4em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            background: #f1f5f9;
+            padding: 15px;
+            border-left: 4px solid #6366f1;
+        }
+        
+        h4 {
+            color: #475569;
+            font-size: 1.1em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .subtitle {
+            color: #64748b;
+            font-size: 1.1em;
+            margin-top: 5px;
+        }
+        
+        .app-source {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+        
+        .feature-section {
+            margin-bottom: 50px;
+            padding: 20px;
+            background: #fafafa;
+            border-radius: 8px;
+        }
+        
+        .overview {
+            background: #fff;
+            padding: 15px;
+            border-left: 3px solid #6366f1;
+            margin-bottom: 20px;
+        }
+        
+        .sections-list {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        
+        .sections-list ol {
+            padding-left: 20px;
+        }
+        
+        .sections-list li {
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+        
+        .workflow {
+            background: #f0f9ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+        
+        .screenshot-container {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border: 2px solid #e2e8f0;
+        }
+        
+        .screenshot-container img {
+            max-width: 25%;
+            height: auto;
+            display: block;
+            margin: 15px auto;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .screenshot-label {
+            font-weight: 600;
+            color: #6366f1;
+            margin-bottom: 10px;
+            font-size: 1.05em;
+        }
+        
+        .additional-features {
+            background: #fef3c7;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+        
+        .additional-features h3 {
+            background: transparent;
+            border-left: 4px solid #f59e0b;
+            color: #92400e;
+        }
+        
+        .feature-item {
+            background: white;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            border-left: 3px solid #f59e0b;
+        }
+        
+        .apps-list {
+            background: #ecfdf5;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .apps-list ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .apps-list li {
+            padding: 8px 0;
+            font-weight: 600;
+        }
+        
+        footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 2px solid #e2e8f0;
+            text-align: center;
+            color: #64748b;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Features for CV/Resume Builder Application</h1>
+            <p class="subtitle">AI Feature Documentation</p>
+	    <p class="subtitle">Cv Builder-Resume Maker Application</p>
+        </header>
+
+        <h2>📋 Core AI Features</h2>
+
+        <!-- Feature 1 -->
+        <div class="feature-section">
+            <h3>Feature 1: AI Content Descriptions Generator</h3>
+            <span class="app-source">Source: Kickresume AI Resume Builder</span>
+            
+            <h4>Overview</h4>
+            <div class="overview">
+                Automatically generates professional descriptions for all resume sections using AI.
+            </div>
+
+            <h4>Supported Sections</h4>
+            <div class="sections-list">
+                <ol>
+                    <li><strong>Work Experience Descriptions</strong> - Creates achievement-oriented bullet points from basic job information.</li>
+                    <li><strong>Education Descriptions</strong> - Highlights relevant coursework, achievements, and skills gained.</li>
+                    <li><strong>Skills Descriptions</strong> - Provides context and proficiency levels for listed skills.</li>
+                    <li><strong>Certifications</strong> - Adds professional context to credentials and explains relevance.</li>
+                    <li><strong>Awards & Achievements</strong> - Crafts impactful descriptions with quantified significance.</li>
+                    <li><strong>Volunteering Experience</strong> - Highlights transferable skills and community impact.</li>
+                </ol>
+            </div>
+
+            <h4>User Workflow</h4>
+            <div class="workflow">
+                User selects section → Enters basic information → AI generates multiple options → User selects and customizes → Content added to resume
+            </div>
+
+            <div class="screenshot-container">
+                <div class="screenshot-label">Screenshot Placeholder: AI Content Generator Interface</div>
+		<img src="screenshot6.png" alt="Skills Generator Screenshot" style="background: #f1f5f9; padding: 20px;">
+                <p style="text-align: center; color: #64748b; padding: 40px; background: #f8fafc; border-radius: 4px;">
+                    Showing the descriptions for different sections including objective, work experience etc.
+                </p>
+            </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-section">
+            <h3>Feature 2: AI Resume Summary Generator</h3>
+            <span class="app-source">Source: AI Resume</span>
+            
+            <h4>Overview</h4>
+            <div class="overview">
+                Creates compelling 3-5 sentence professional summaries that capture candidate's value proposition and highlights top achievements with target job keywords.
+            </div>
+
+            <h4>User Workflow</h4>
+            <div class="workflow">
+                User completes work experience → Clicks generate summary → AI creates 3 variations → User selects preferred option → Customizes if needed
+            </div>
+
+            <div class="screenshot-container">
+                <div class="screenshot-label">Screenshot Placeholder: Summary Generator</div>
+		<img src="screenshot9.png" alt="Personal Statement Screenshot" style="background: #f1f5f9; padding: 20px;">
+                <p style="text-align: center; color: #64748b; padding: 40px; background: #f8fafc; border-radius: 4px;">
+                    Showing how summery will generate with AI
+                </p>
+            </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-section">
+            <h3>Feature 3: AI Personal Statement Writer</h3>
+            <span class="app-source">Source: CV Maker AI Resume</span>
+            
+            <h4>Overview</h4>
+            <div class="overview">
+                Creates narrative-style statements explaining career motivations, unique value, career transitions, and demonstrates personality for academic CVs, career changers, and international applications.
+            </div>
+
+            <h4>User Workflow</h4>
+            <div class="workflow">
+                User answers targeted questions about motivations and goals → AI generates personalized statement → User reviews and edits for authenticity
+            </div>
+
+            <div class="screenshot-container">
+                <div class="screenshot-label">Image 5: AI Personal Statement Generator</div>
+                <img src="screenshot5.png" alt="Personal Statement Screenshot" style="background: #f1f5f9; padding: 20px;">
+                <p style="text-align: center; color: #64748b; font-size: 0.9em; margin-top: 10px;">
+                    Shows generated personal statement for SQA Engineer with "Auto/Manual" toggle, "Use this text" and "Regenerate" buttons
+                </p>
+            </div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-section">
+            <h3>Feature 4: AI Career Objective Generator</h3>
+            <span class="app-source">Source: AI Resume/CV Builder Apps</span>
+            
+            <h4>Overview</h4>
+            <div class="overview">
+                Creates concise 1-2 sentence statements communicating candidate's immediate career target with key qualifications for entry-level, career changers, and specific role targeting.
+            </div>
+
+            <h4>User Workflow</h4>
+            <div class="workflow">
+                User enters target job title → Indicates experience level → AI generates objective variations → User selects and customizes
+            </div>
+
+            <div class="screenshot-container">
+                <div class="screenshot-label">Screenshot Placeholder: Objective Generator</div>
+		<img src="screenshot8.png" alt="Personal Statement Screenshot" style="background: #f1f5f9; padding: 20px;">
+                <p style="text-align: center; color: #64748b; padding: 40px; background: #f8fafc; border-radius: 4px;">
+                    Showing Interface for generating objective with AI button to generate Objective
+                </p>
+            </div>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="feature-section">
+            <h3>Feature 5: Full Resume Generation with AI</h3>
+            <span class="app-source">Source: Kickresume AI Resume Builder</span>
+            
+            <h4>Overview</h4>
+            <div class="overview">
+                Creates complete professional resume with all sections from scratch using simple questionnaire, applies professional formatting, and ensures ATS compatibility.
+            </div>
+
+            <h4>User Workflow</h4>
+            <div class="workflow">
+                User clicks create full resume → Completes questionnaire → AI processes information → Complete resume displayed → User reviews and edits
+            </div>
+
+            <div class="screenshot-container">
+                <div class="screenshot-label">Image 4: Full Resume Generation with AI</div>
+                <img src="screenshot4.png" alt="Full Resume Generation Screenshot" style="background: #f1f5f9; padding: 20px;">
+                <p style="text-align: center; color: #64748b; font-size: 0.9em; margin-top: 10px;">
+                    Shows "New resume with AI" interface with name and job title input fields with "Generate" button
+                </p>
+            </div>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="feature-section">
+            <h3>Feature 6: LinkedIn Profile Import & Resume Generation</h3>
+            <span class="app-source">Source: Kickresume AI Resume Builder</span>
+            
+            <h4>Overview</h4>
+            <div class="overview">
+                Converts LinkedIn profile into professionally formatted resume with AI reformatting, removes casual language, optimizes for ATS, and organizes skills by relevance.
+            </div>
+
+            <h4>User Workflow</h4>
+            <div class="workflow">
+                User authorizes LinkedIn access → AI imports and processes data → AI optimizes content → Complete resume displayed → User customizes
+            </div>
+
+            <div class="screenshot-container">
+                <div class="screenshot-label">Image 3: LinkedIn Profile Import</div>
+                <img src="screenshot3.png" alt="LinkedIn Import Screenshot" style="background: #f1f5f9; padding: 20px;">
+                <p style="text-align: center; color: #64748b; font-size: 0.9em; margin-top: 10px;">
+                    Shows LinkedIn profile URL input field with "Continue" button for import process
+                </p>
+            </div>
+        </div>
+
+        <!-- Feature 7 -->
+        <div class="feature-section">
+            <h3>Feature 7: AI Resume Tailoring</h3>
+            <span class="app-source">Source: Kickresume AI Resume Builder</span>
+            
+            <h4>Overview</h4>
+            <div class="overview">
+                Analyzes job description and automatically customizes resume by extracting required skills, reordering skills by relevance, rewriting bullet points, adjusting summary, and identifying missing qualifications.
+            </div>
+
+            <h4>User Workflow</h4>
+            <div class="workflow">
+                User pastes job description → AI analyzes requirements → System shows optimized version → User reviews changes → Downloads tailored resume
+            </div>
+
+            <div class="screenshot-container">
+                <div class="screenshot-label">Image 2: AI Resume Tailoring Interface</div>
+                <img src="screenshot2.png" alt="Resume Tailoring Screenshot" style="background: #f1f5f9; padding: 20px;">
+                <p style="text-align: center; color: #64748b; font-size: 0.9em; margin-top: 10px;">
+                    Shows job title, company name, and job post input fields with "Tailor Now" button for processing
+                </p>
+            </div>
+        </div>
+
+        <!-- Feature 8 -->
+        <div class="feature-section">
+            <h3>Feature 8: AI Skills Generator</h3>
+            <span class="app-source">Source: Kickresume AI Resume Builder</span>
+            
+            <h4>Overview</h4>
+            <div class="overview">
+                Identifies and recommends relevant skills by extracting from job descriptions, suggesting based on work history, categorizing skills, identifying gaps, and ranking by market demand.
+            </div>
+
+            <h4>User Workflow</h4>
+            <div class="workflow">
+                User navigates to skills section → System analyzes resume and job description → AI presents suggested skills → User selects desired skills → Skills formatted in resume
+            </div>
+
+            <div class="screenshot-container">
+                <div class="screenshot-label">Image 1: AI Skills Generator Interface</div>
+                <img src="screenshot1.png" alt="Skills Generator Screenshot" style="background: #f1f5f9; padding: 20px;">
+                <p style="text-align: center; color: #64748b; font-size: 0.9em; margin-top: 10px;">
+                    Shows "AI Writer" and "Voice AI" options for skills generation with skill category selection
+                </p>
+            </div>
+        </div>
+
+        <!-- Additional Features -->
+        <div class="additional-features">
+            <h2>💡 Additional Recommended AI Features</h2>
+
+            <div class="feature-item">
+                <h3>Feature 9: AI Cover Letter Generator</h3>
+                <span class="app-source">Source: Kickresume, Enhancv, Rezi</span>
+                <p style="margin-top: 10px;">Automatically creates personalized cover letters matching resume content and job requirements.</p>
+            </div>
+
+            <div class="feature-item">
+                <h3>Feature 10: ATS Score & Optimization Checker</h3>
+                <span class="app-source">Source: Rezi, Resumai, Jobscan</span>
+                <p style="margin-top: 10px;">Scans resume for ATS compatibility and provides score with specific improvement suggestions.</p>
+
+		<div class="screenshot-container">
+                <div class="screenshot-label">Screenshot: ATS Score</div>
+		<img src="screenshot7.png" alt="Skills Generator Screenshot" style="background: #f1f5f9; padding: 20px;">
+                <p style="text-align: center; color: #64748b; padding: 40px; background: #f8fafc; border-radius: 4px;">
+                    Showing the ATS funtionality 
+                </p>
+            	</div>
+            </div>
+
+            <div class="feature-item">
+                <h3>Feature 11: AI Bullet Point Enhancer</h3>
+                <span class="app-source">Source: Careerflow, Rezi, Enhancv</span>
+                <p style="margin-top: 10px;">Transforms basic responsibilities into achievement-focused bullet points with metrics.</p>
+            </div>
+
+            <div class="feature-item">
+                <h3>Feature 12: Multi-Resume Version Management</h3>
+                <span class="app-source">Source: Rezi, VisualCV, Kickresume</span>
+                <p style="margin-top: 10px;">Allows saving and organizing multiple resume versions for different job applications.</p>
+            </div>
+        </div>
+
+        <!-- Apps List -->
+        <div class="apps-list">
+            <h2>📱 Apps to Download</h2>
+            <ul>
+                <li>🔵 <strong>Kickresume AI Resume Builder</strong> (Primary source - iOS/Android/Web)</li>
+                <li>🔵 <strong>AI Resume</strong> (For summary feature)</li>
+                <li>🔵 <strong>CV Maker AI Resume</strong> (For personal statement)</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p><strong>Document Prepared By:</strong> Adeel SQA Engg</p>
+            <p><strong>Purpose:</strong> AI Feature Implementation for CV Builder App</p>
+            <p><strong>Codematics Services (Private) Limited.</p>
+        </footer>
+    </div>
+</body>
+</html>
